@@ -1,0 +1,19 @@
+Extracted frequency words: 3370
+Merged dataset shape: (2076, 4)
+
+==============================
+PEARSON CORRELATIONS
+==============================
+Length vs Frequency: r = -0.5013
+Length vs Mean RT:   r = 0.2003
+Frequency vs Mean RT: r = -0.1191
+
+==============================
+SUMMARY
+==============================
+
+Longer words generally show increased reading times (positive correlation).
+Higher frequency words show reduced reading times (negative correlation).
+Word length and frequency typically show a weak negative association.
+
+These findings align with established psycholinguistic effects.

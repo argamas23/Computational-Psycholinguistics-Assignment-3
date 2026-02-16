@@ -18,6 +18,15 @@ rt_df = pd.read_csv(rt_path, sep="\t")
 mean_rt = rt_df.groupby("word")["RT"].mean().reset_index()
 mean_rt.columns = ["word", "mean_RT"]
 
+print("\n==============================")
+print("MEAN RT PER WORD (First 20)")
+print("==============================")
+print(mean_rt.head(20))
+
+overall_mean_rt = rt_df["RT"].mean()
+print("\nOVERALL MEAN RT (All subjects, all words):",
+      round(overall_mean_rt, 2), "ms")
+
 # Clean words
 mean_rt["word"] = mean_rt["word"].astype(str)
 mean_rt["word"] = mean_rt["word"].str.lower().str.strip()

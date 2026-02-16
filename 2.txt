@@ -1,0 +1,75 @@
+Columns in processed_RTs.tsv: Index(['WorkerId', 'WorkTimeInSeconds', 'correct', 'item', 'zone', 'RT',
+       'word', 'nItem', 'meanItemRT', 'sdItemRT', 'gmeanItemRT', 'gsdItemRT'],
+      dtype='object')
+Frequency data loaded successfully.
+
+==============================
+MODEL 1: RT ~ log_freq + length
+==============================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                  0.000
+Method:                 Least Squares   F-statistic:                     92.41
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):           7.42e-41
+Time:                        21:49:16   Log-Likelihood:            -6.2833e+06
+No. Observations:              734784   AIC:                         1.257e+07
+Df Residuals:                  734781   BIC:                         1.257e+07
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const        2444.0568     13.485    181.242      0.000    2417.627    2470.487
+log_freq        1.6526      0.434      3.804      0.000       0.801       2.504
+word_length    11.7098      1.001     11.696      0.000       9.748      13.672
+==============================================================================
+Omnibus:                   427753.060   Durbin-Watson:                   2.064
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          4177900.286
+Skew:                           2.696   Prob(JB):                         0.00
+Kurtosis:                      13.363   Cond. No.                         222.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================
+MODEL 2: RT ~ surprisal + length
+==============================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                  0.000
+Method:                 Least Squares   F-statistic:                     91.72
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):           1.48e-40
+Time:                        21:49:16   Log-Likelihood:            -6.2833e+06
+No. Observations:              734784   AIC:                         1.257e+07
+Df Residuals:                  734781   BIC:                         1.257e+07
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const        2513.2506      6.250    402.145      0.000    2501.002    2525.500
+surprisal      -1.6072      0.444     -3.617      0.000      -2.478      -0.736
+word_length    11.5495      0.996     11.591      0.000       9.597      13.502
+==============================================================================
+Omnibus:                   427753.892   Durbin-Watson:                   2.064
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          4177910.988
+Skew:                           2.696   Prob(JB):                         0.00
+Kurtosis:                      13.363   Cond. No.                         85.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================
+MODEL COMPARISON
+==============================
+Model 1 R²: 0.0003
+Model 2 R²: 0.0002
+→ Model 1 fits better.
+
+Plots saved:
+ - model1_logfreq_vs_rt.png
+ - model2_surprisal_vs_rt.png

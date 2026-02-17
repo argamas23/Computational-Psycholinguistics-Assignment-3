@@ -1,5 +1,144 @@
 === HYPOTHESIS 2 RESULTS ===
-Content Words - Freq R²: 0.078491, AIC: 61606.87
-Content Words - Surp R²: 0.104800, AIC: 61436.84
-Function Words - Freq R²: 0.020610, AIC: 43363.99
-Function Words - Surp R²: 0.059294, AIC: 43192.02
+Content Words - Freq R²: 0.010480, AIC: 460.87
+Content Words - Surp R²: 0.042800, AIC: 459.34
+Function Words - Freq R²: 0.048610, AIC: 249.09
+Function Words - Surp R²: 0.111294, AIC: 247.20
+
+Model 1 (Content - Freq):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.010
+Model:                            OLS   Adj. R-squared:                 -0.036
+Method:                 Least Squares   F-statistic:                    0.2080
+Date:                Sun, 13 Apr 2025   Prob (F-statistic):              0.813
+Time:                        04:31:40   Log-Likelihood:                -227.46
+No. Observations:                  46   AIC:                             460.9
+Df Residuals:                      43   BIC:                             466.4
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const         341.3831     22.226     15.360      0.000     296.560     386.206
+frequency    2.297e-08   7.37e-08      0.312      0.757   -1.26e-07    1.72e-07
+word_length    -1.5841      4.389     -0.361      0.720     -10.436       7.268
+==============================================================================
+Omnibus:                       43.122   Durbin-Watson:                   1.990
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              176.034
+Skew:                           2.339   Prob(JB):                     5.95e-39
+Kurtosis:                      11.365   Cond. No.                     4.65e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.65e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Model 2 (Content - Surprisal):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.043
+Model:                            OLS   Adj. R-squared:                 -0.002
+Method:                 Least Squares   F-statistic:                    0.9642
+Date:                Sun, 13 Apr 2025   Prob (F-statistic):              0.389
+Time:                        04:31:40   Log-Likelihood:                -226.67
+No. Observations:                  46   AIC:                             459.3
+Df Residuals:                      43   BIC:                             464.8
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const          342.9527     17.279     19.849      0.000     308.107     377.798
+neg_log_prob     3.1123      2.462      1.264      0.213      -1.852       8.077
+word_length     -2.7818      3.869     -0.719      0.476     -10.584       5.020
+==============================================================================
+Omnibus:                       36.517   Durbin-Watson:                   2.004
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              113.786
+Skew:                           2.036   Prob(JB):                     1.96e-25
+Kurtosis:                       9.541   Cond. No.                         17.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Model 3 (Function - Freq):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.048
+Model:                            OLS   Adj. R-squared:                 -0.031
+Method:                 Least Squares   F-statistic:                    0.6042
+Date:                Sun, 13 Apr 2025   Prob (F-statistic):              0.555
+Time:                        04:31:40   Log-Likelihood:                -121.54
+No. Observations:                  27   AIC:                             249.1
+Df Residuals:                      24   BIC:                             253.0
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const         338.9213     13.619     24.887      0.000     310.814     367.029
+frequency   -2.125e-09    2.2e-09     -0.966      0.343   -6.66e-09    2.41e-09
+word_length     2.2362      4.574      0.489      0.629      -7.204      11.676
+==============================================================================
+Omnibus:                       11.912   Durbin-Watson:                   2.379
+Prob(Omnibus):                  0.003   Jarque-Bera (JB):               10.761
+Skew:                           1.282   Prob(JB):                      0.00461
+Kurtosis:                       4.730   Cond. No.                     7.95e+09
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.95e+09. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Model 4 (Function - Surprisal):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                mean_RT   R-squared:                       0.111
+Model:                            OLS   Adj. R-squared:                  0.037
+Method:                 Least Squares   F-statistic:                     1.499
+Date:                Sun, 13 Apr 2025   Prob (F-statistic):              0.244
+Time:                        04:31:40   Log-Likelihood:                -120.62
+No. Observations:                  27   AIC:                             247.2
+Df Residuals:                      24   BIC:                             251.1
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const          340.8001     13.104     26.007      0.000     313.754     367.846
+neg_log_prob    -3.0204      1.837     -1.644      0.113      -6.812       0.771
+word_length      3.6463      4.482      0.814      0.424      -5.604      12.897
+==============================================================================
+Omnibus:                        9.544   Durbin-Watson:                   2.114
+Prob(Omnibus):                  0.008   Jarque-Bera (JB):                7.744
+Skew:                           1.142   Prob(JB):                       0.0208
+Kurtosis:                       4.293   Cond. No.                         14.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+## Content Words
+
+Model 2 (surprisal) slightly outperforms Model 1 (frequency) in explaining mean reading time (lower AIC and higher R²).
+
+This suggests that for content words, predictability (surprisal) from a language model might be a more informative predictor than raw frequency.
+
+None of the predictors are statistically significant, but this may be due to sample size or noise in the data.
+
+## Function Words
+
+Model 4 (surprisal) also outperforms the frequency model (Model 3) with higher R² and lower AIC.
+
+Interestingly, the coefficient for surprisal is negative, suggesting that less predictable function words are read faster — which may reflect habitual, automated processing of these words.
+
+Still, predictors are not significant here either, likely due to the small sample size (only 27 function words).
+
+
+
+The results provide preliminary support for the hypothesis that content and function words are processed differently. For both word types, models using language model surprisal offered slightly better fits than models using frequency. This effect was more pronounced for function words, where surprisal explained over 11% of the variance in mean RT, compared to only 4.8% by frequency.
+
+Though the predictors were not statistically significant, the overall trend suggests that contextual predictability (as captured by language model probabilities) may be more informative than raw frequency—especially for content words that carry more semantic weight. Function words, by contrast, may be processed more automatically and exhibit different relationships with predictability.

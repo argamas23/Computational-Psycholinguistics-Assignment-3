@@ -1,0 +1,7 @@
+=== HYPOTHESIS 1 RESULTS ===
+Model 1 (Surface) R-squared: 0.060530, AIC: 105156.03
+Model 2 (Root/Lemma) R-squared: 0.060603, AIC: 105157.23
+
+Surface R²: 0.0917
+Lemma R²: 0.1039
+Mean RT Pseudo: 336.83ms | Mean RT Real: 336.20ms

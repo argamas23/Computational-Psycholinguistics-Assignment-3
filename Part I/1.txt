@@ -38,8 +38,8 @@ Frequency vs Mean RT: r = -0.1191
 SUMMARY
 ==============================
 
-The overall mean reading time across all subjects and words was 337.96 ms. Mean reading time per word was computed by averaging reaction times across all participants for each lexical item.
+Word length and mean reading time show a moderate positive relationship: longer words tend to take slightly more time to read.
 
-The correlation analysis revealed three key relationships. First, word length and frequency were moderately negatively correlated (r = −0.50), indicating that longer words tend to occur less frequently in the language. Second, word length was positively correlated with mean reading time (r = 0.20), suggesting that longer words take more time to read. Third, word frequency was negatively correlated with mean reading time (r = −0.12), indicating that more frequent words are read faster.
+There is a small, negative correlation between word length and word frequency, which aligns with the intuition that less frequent words tend to be longer.
 
-Together, these results show that reading time increases with word length and decreases with word frequency. However, the effect of length appears stronger than the effect of frequency in this dataset. These findings are consistent with well-established psycholinguistic effects: longer words require more visual and lexical processing, while high-frequency words benefit from faster lexical access.
+Word frequency has a very weak, statistically insignificant correlation with mean reading time, meaning the frequency of a word doesn’t strongly influence how quickly it is read.

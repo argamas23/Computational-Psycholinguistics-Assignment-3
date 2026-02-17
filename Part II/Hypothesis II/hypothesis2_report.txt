@@ -1,0 +1,5 @@
+=== HYPOTHESIS 2 RESULTS ===
+Content Words - Freq R²: 0.078491, AIC: 61606.87
+Content Words - Surp R²: 0.104800, AIC: 61436.84
+Function Words - Freq R²: 0.020610, AIC: 43363.99
+Function Words - Surp R²: 0.059294, AIC: 43192.02

@@ -13,11 +13,11 @@ import seaborn as sns
 # -----------------------------------------------------
 print("Loading RT data...")
 # Loading the Reading Times file [cite: 10]
-rt_df = pd.read_csv("data/processed_RTs.tsv", sep="\t") 
+rt_df = pd.read_csv("../../data/processed_RTs.tsv", sep="\t") 
 
 print("Loading frequency data from data/freqs/...")
 freq_list = []
-freq_dir = "data/freqs/" # Source for word frequencies [cite: 11]
+freq_dir = "../../data/freqs/" # Source for word frequencies [cite: 11]
 
 for file in os.listdir(freq_dir):
     if file.startswith("freqs-") and file.endswith(".tsv"):

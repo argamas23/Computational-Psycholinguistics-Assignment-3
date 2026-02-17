@@ -12,7 +12,7 @@ from scipy.stats import pearsonr
 # -----------------------------
 # 1. Load Reading Time Data
 # -----------------------------
-rt_path = "data/processed_RTs.tsv"
+rt_path = "../data/processed_RTs.tsv"
 rt_df = pd.read_csv(rt_path, sep="\t")
 
 mean_rt = rt_df.groupby("word")["RT"].mean().reset_index()
@@ -35,7 +35,7 @@ mean_rt["length"] = mean_rt["word"].str.len()
 # -----------------------------
 # 2. Load Frequency Files (CORRECT PARSER)
 # -----------------------------
-freq_folder = "data/freqs/"
+freq_folder = "../data/freqs/"
 freq_files = glob.glob(os.path.join(freq_folder, "*.tsv"))
 
 freq_dict = {}

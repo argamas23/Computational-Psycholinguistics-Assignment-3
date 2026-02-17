@@ -59,3 +59,7 @@ Kurtosis:                      17.164   Cond. No.                         15.1
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+
+While the hypothesis specifies GPT-3 probabilities, GPT-2 was utilized as a representative causal language model. GPT-2 allows for local, deterministic computation of full surprisal values (−logP) across the entire vocabulary, serving as a robust proxy for higher-order transformer models in predicting reading time variance
